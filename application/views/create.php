@@ -20,6 +20,7 @@
                 <textarea class="form-control" name="description" id="description"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
+            <a href="index">go back</a>
         </form>
     </div>
 </body>
