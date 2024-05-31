@@ -8,7 +8,7 @@ class Product_model extends CI_Model {
     // Create a new product
     public function create_product($data) {
         $this->db->insert('products', $data);
-        return $this->db->insert_id();
+        // return $this->db->insert_id();
     }
 
     // Get all products

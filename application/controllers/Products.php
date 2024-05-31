@@ -18,6 +18,7 @@ class Products extends CI_Controller {
         if ($this->form_validation->run() == FALSE) {
             // Form validation failed, redirect back to the form with validation errors
             $this->load->view('create');
+            
         } else {
             // Form validation passed, proceed with creating the product
             $data = array(
