@@ -33,7 +33,7 @@ class User extends CI_Controller {
  
 		if($data){
 			$this->session->set_userdata('user', $data);
-			redirect('home');
+			redirect('products');
 		}
 		else{
 			header('location:'.base_url().$this->index());
@@ -47,7 +47,7 @@ class User extends CI_Controller {
  
 		//restrict users to go to home if not logged in
 		if($this->session->userdata('user')){
-			$this->load->view('home');
+			$this->load->view('index');
 		}
 		else{
 			redirect('/');

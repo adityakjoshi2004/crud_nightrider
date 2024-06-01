@@ -33,8 +33,11 @@ class Products extends CI_Controller {
     }
 
     // Read all products
+    
     public function index() {
         $data['products'] = $this->product_model->get_products();
+        // print_r($data);
+        // die();
         $this->load->view('index', $data);
     }
 
@@ -69,5 +72,19 @@ public function perform_update($id) {
     redirect('products');
 
     }
+
+    public function home() {
+        $this->load->view('home');
+    }   
+    public function details($product_id) {
+        $product = $this->product_model->get_product($product_id);
+        if (!$product) {
+            show_404();
+        }
+    
+        $data['product'] = $product;
+        $this->load->view('details', $data);
+    }
 }
+
 ?>

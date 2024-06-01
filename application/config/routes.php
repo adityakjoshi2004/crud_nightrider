@@ -58,3 +58,5 @@ $route['products/update/(:num)'] = 'products/update/$1';
 $route['products/delete/(:num)'] = 'products/delete/$1';
 $route['default_controller'] = 'user';
 $route['home'] = 'user/home';
+$route['products/details/(:num)'] = 'products/details/$1';
+
